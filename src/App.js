@@ -4,6 +4,13 @@
 // import Content from "./components/Content";
 
 import Baitap1 from "./Baitap1";
+import Baitap2 from "./Baitap2";
+import ConditionClass from "./Condition";
+import DataBindingClass from "./DataBinding/DataBindingClass";
+import DataBindingFunction from "./DataBinding/DataBindingFunction";
+import EventClass from "./HandleEvent";
+import ListsClass from "./Lists";
+import StateClass from "./State";
 // JSX - Javascript XML => Kết hợp javascript với HTML lại với nhau
 
 // Component App
@@ -22,7 +29,16 @@ function App() {
     //   <Footer />
     // </div>
 
-    <Baitap1 />
+    <>
+      {/* <Baitap1 /> */}
+      {/* <DataBindingClass /> */}
+      {/* <DataBindingFunction /> */}
+      <EventClass />
+      {/* <ConditionClass /> */}
+      {/* <ListsClass /> */}
+      {/* <StateClass /> */}
+      {/* <Baitap2 /> */}
+    </>
   );
 }
 
