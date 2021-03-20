@@ -17,6 +17,7 @@ export default class ProductItem extends Component {
           <p className="card-text">{product.manHinh}</p>
           <p className="card-text">{product.heDieuHanh}</p>
           <button className="btn btn-success" onClick={this.getProduct}>Xem Chi Tiết</button>
+          <button className="btn btn-danger" onClick={() => this.props.addToCart(product)}>Thêm giỏ hàng</button>
         </div>
       </div>
     );

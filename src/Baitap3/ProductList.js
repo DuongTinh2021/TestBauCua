@@ -16,7 +16,11 @@ export default class ProductList extends Component {
     // setState lại cho productDetail bằng product vừa nhận đc
     console.log(product);
     this.setState({ productDetail: product });
-  }
+  };
+
+  addToCart = (product) => {
+    console.log(product);
+  };
 
   render() {
     const { products } = this.props;
@@ -26,7 +30,11 @@ export default class ProductList extends Component {
           {products.map((product) => {
             return (
               <div key={product.maSP} className="col-sm-4">
-                <ProductItem product={product} getProduct={this.getProduct} />
+                <ProductItem
+                  product={product}
+                  getProduct={this.getProduct}
+                  addToCart={this.addToCart}
+                />
               </div>
             );
           })}

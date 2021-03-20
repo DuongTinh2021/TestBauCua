@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ProductList from "./ProductList";
-
+import ProductCart from "./ProductCart";
 export default class Baitap3 extends Component {
   constructor(props) {
     super(props);
@@ -51,6 +51,7 @@ export default class Baitap3 extends Component {
     return (
       <div className="container">
         <ProductList products={this.state.products} />
+        <ProductCart />
       </div>
     );
   }
