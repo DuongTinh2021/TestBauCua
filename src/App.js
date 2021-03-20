@@ -5,11 +5,13 @@
 
 import Baitap1 from "./Baitap1";
 import Baitap2 from "./Baitap2";
+import Baitap3 from "./Baitap3";
 import ConditionClass from "./Condition";
 import DataBindingClass from "./DataBinding/DataBindingClass";
 import DataBindingFunction from "./DataBinding/DataBindingFunction";
 import EventClass from "./HandleEvent";
 import ListsClass from "./Lists";
+import Parent from "./Props/Parent";
 import StateClass from "./State";
 // JSX - Javascript XML => Kết hợp javascript với HTML lại với nhau
 
@@ -33,11 +35,13 @@ function App() {
       {/* <Baitap1 /> */}
       {/* <DataBindingClass /> */}
       {/* <DataBindingFunction /> */}
-      <EventClass />
+      {/* <EventClass /> */}
       {/* <ConditionClass /> */}
       {/* <ListsClass /> */}
       {/* <StateClass /> */}
       {/* <Baitap2 /> */}
+      {/* <Parent /> */}
+      <Baitap3 />
     </>
   );
 }
