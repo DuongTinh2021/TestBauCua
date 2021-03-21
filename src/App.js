@@ -10,6 +10,7 @@ import ConditionClass from "./Condition";
 import DataBindingClass from "./DataBinding/DataBindingClass";
 import DataBindingFunction from "./DataBinding/DataBindingFunction";
 import EventClass from "./HandleEvent";
+import Lifecycle from "./Lifecycle";
 import ListsClass from "./Lists";
 import Parent from "./Props/Parent";
 import StateClass from "./State";
@@ -41,7 +42,8 @@ function App() {
       {/* <StateClass /> */}
       {/* <Baitap2 /> */}
       {/* <Parent /> */}
-      <Baitap3 />
+      {/* <Baitap3 /> */}
+      <Lifecycle />
     </>
   );
 }

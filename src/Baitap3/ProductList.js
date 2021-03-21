@@ -19,7 +19,9 @@ export default class ProductList extends Component {
   };
 
   addToCart = (product) => {
-    console.log(product);
+    // Trung gian để tiếp tục truyền product lên component BaiTap3
+    // console.log(product);
+    this.props.addToCart(product);
   };
 
   render() {
