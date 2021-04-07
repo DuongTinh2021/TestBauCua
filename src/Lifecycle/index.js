@@ -8,6 +8,7 @@ export default class Lifecycle extends Component {
     console.log("Run Constructor");
     this.state = {
       count: 0,
+      count1: 0
     };
   }
 
@@ -36,7 +37,7 @@ export default class Lifecycle extends Component {
   // Gọi API
   // tương tác với DOM
   // setState
-  // Có thể lấy đc giá trị trước khi thay đổi của props và sstat
+  // Có thể lấy đc giá trị trước khi thay đổi của props và state
   componentDidUpdate(prevProps, prevState) {
     console.log("Run componentDidUpdate");
     console.log("Giá trị trước đó:", prevState, prevProps);
@@ -52,6 +53,14 @@ export default class Lifecycle extends Component {
       };
     });
   };
+  
+  increase1 = () => {
+    this.setState((state) => {
+      return {
+        count1: state.count1 + 1,
+      };
+    });
+  };
 
   render() {
     console.log("Run Render");
@@ -60,7 +69,8 @@ export default class Lifecycle extends Component {
       <div>
         <h1 id="demo">Lifecycle</h1>
 
-        <button onClick={this.increase}>Click</button>
+        <button onClick={this.increase}>Click Count</button>
+        <button onClick={this.increase1}>Click Count1</button>
 
         {/* {this.state.count < 5 ? <Child count={this.state.count} /> : null} */}
 
