@@ -28,55 +28,56 @@ import BauCua2 from "./BauCua2";
 import DemoRedux from "./DemoRedux";
 import ToDoList from "./TodoListRedux";
 import QuanLyKhoaHoc from "./QuanLyKhoaHoc";
-import TodoList1 from "./TodoListRedux1";
+
 import OrderBuger from "./OrderBuger";
 
 // JSX - Javascript XML => Kết hợp javascript với HTML lại với nhau
 
+// Set up react-router
+
+import {BrowserRouter, Route, Switch} from "react-router-dom"
+import DemoRouter from "./demoRouter";
+import NestedRouter from "./demoRouter/NestedRouter";
 // Component App
 function App() {
   return (
-    // <div className="App">
-    //   <Header />
-    //   <div className="d-flex">
-    //     <div className="w-25">
-    //       <Sidebar />
-    //     </div>
-    //     <div className="w-75">
-    //       <Content />
-    //     </div>
-    //   </div>
-    //   <Footer />
-    // </div>
+    <BrowserRouter>
+    {/**
+     * Switch: Chọn cái đầu tiên khớp với url để render ra
+     */}
+      <Switch>
+        {/**
+         * path: so sánh path với url để quyết định component có được hiển thị ra hay khônng
+         * exact: Thông thường path "/" sẽ khớp với tất cả url, để khắc phục ta thêm exact lúc này nó sẽ so dánh url khớp 100% mới hiển thi ra component
+         */}
+          <Route path="/" exact component={DemoRouter} />
 
-    <>
-      {/* <Baitap1 /> */}
-      {/* <DataBindingClass /> */}
-      {/* <DataBindingFunction /> */}
-      {/* <EventClass /> */}
-      {/* <ConditionClass /> */}
-      {/* <ListsClass /> */}
-      {/* <StateClass /> */}
-      {/* <Baitap2 /> */}
-      {/* <Parent /> */}
-      {/* <Baitap3 /> */}
-      {/* <Lifecycle /> */}
-      {/* <UserManagement /> */}
-      {/* <UserManagement1 /> */}
-      {/* <Baitap3Again /> */}
-      {/* <State /> */}
-      {/* <Lifecycle /> */}
-      {/* <DemoHook /> */}
-      {/* <DemoHook1 /> */}
-      {/* <BauCua /> */}
-      {/* <BauCua1 /> */}
-      {/* <BauCua2 /> */}
-      {/* <DemoRedux /> */}
-      {/* <ToDoList /> */}
-      {/* <QuanLyKhoaHoc /> */}
-      {/* <TodoList1 /> */}
-      <OrderBuger />
-    </>
+          <Route path="/phim/:movieId" exact component={DemoRouter} />
+
+          {/**Demo Nested Router */}
+           <Route path="/topics">
+              <NestedRouter />
+          </Route>
+
+         {/**Cách 1: dùng props component */}
+        <Route path="/courses" component={QuanLyKhoaHoc} />
+
+        {/**Cách 2: dùn children */}
+        <Route path="/baucua">
+          <BauCua />
+        </Route>
+
+         {/**Dùng reder */}
+        <Route path="/todo-list" render = { (routerProps) =>    {return <ToDoList {...routerProps} />}}/>
+
+
+        {/**Để paga not found ở dưới cùng, đảm bảo đi qua tất cả các route khác nhưng ko tìm thấy route */}
+        <Route>
+          <div>Page not found</div>
+        </Route>
+      </Switch>
+    </BrowserRouter>      
+    
   );
 }
 

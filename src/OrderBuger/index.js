@@ -1,10 +1,10 @@
 import React from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { NavItem } from 'reactstrap';
+
 export default function OrderBuger() {
 
-//     const dispatch = useDispatch();
-//     const {data, menu, total} = useSelector(state => state.burger);
+    const dispatch = useDispatch();
+    const {data, total} = useSelector(state => state.burger);
 
 
 //    const renderBread = () => {
@@ -17,71 +17,92 @@ export default function OrderBuger() {
 //        })
 //    }
   
-//     const addDetail = (nameProduct, amount) => {
-//         const action = {
-//             type: "ADD_DETAIL",
-//             payload: {
-//                 nameProduct,
-//                 amount
-//             }
+    const addDetail = (nameProduct, amount) => {
+        const action = {
+            type: "ADD_DETAIL",
+            payload: {
+                nameProduct,
+                amount
+            }
 
-//         };
-//         dispatch(action);
-//     }
-//     return (
-//       <div className="container">
-//           <h3 className="display-4 text-success text-center py-3">Bài Tập Burger</h3>
-//           <div className="row">
-//               <div className="col-7">
-//                     <h3 className="text-center">Bánh burger của bạn</h3>
+        };
+        dispatch(action);
+    }
+    return (
+      <div className="container">
+          <h3 className="display-4 text-success text-center py-3">Bài Tập Burger</h3>
+          <div className="row">
+              <div className="col-7">
+                    <h3 className="text-center">Bánh burger của bạn</h3>
 
-//                     <div className="breadTop"></div>
-                               
-//                    {renderBread()}
+                    <div className="breadTop"></div>
+                               {data.map((item) => {
+                                   let dem = 0;
+                                   const arrBread = []
+                                   while (dem < item.soLuong) {
+                                       dem += 1;
+                                       arrBread.push(<div key={item.gia} className={item.name}></div>);
+                                   }
+                                   return arrBread;
+                               })}
+                   {/* {renderBread()} */}
                         
-//                     <div className="breadBottom"></div>
-//               </div>
-//               <div className="col-5">
-//                   <h3 className="text-center text-success">Chọn thức ăn</h3>
-//                   <table className="table">
-//                       <thead>
-//                           <tr>
-//                                 <th>Thức ăn</th>
-//                                 <th>Số lượng</th>
-//                                 <th>Đơn giá</th>
+                    <div className="breadBottom"></div>
+              </div>
+              <div className="col-5">
+                  <h3 className="text-center text-success">Chọn thức ăn</h3>
+                  <table className="table">
+                      <thead>
+                          <tr>
+                                <th>Thức ăn</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
                                 
-//                           </tr>
-//                       </thead>
-//                     <tbody>
-//                         {
-//                             Object.entries(menu).map(([nameProduct, value], index) => {
-//                                 return (
-//                                     <tr key={index}>
-//                                         <td>{nameProduct}</td>
-//                                         <td>
-//                                             <button onClick={ () => addDetail(nameProduct, 1)} className="btn btn-success">+</button>
-//                                             <span className="mr-3 ml-3">
-//                                                 {data[nameProduct]}
-//                                             </span>
-//                                             <button onClick={ () => addDetail(nameProduct, - 1)} className="btn btn-danger">-</button>
-//                                         </td>
-//                                         <td>${value * data[nameProduct]}</td>
-//                                     </tr>
-//                                 )
-//                             })
+                          </tr>
+                      </thead>
+                    <tbody>
+                        {data.map((item) => (
+                                  <tr>
+                                    <td>{item.name}</td>
+                                    <td>
+                                        <button onClick={ () => addDetail(item.name, 1)} className="btn btn-success">+</button>
+                                        <span className="mr-3 ml-3">
+                                            {item.soLuong}
+                                        </span>
+                                        <button onClick={ () => addDetail(item.name, 1)} className="btn btn-danger">-</button>
+                                    </td>
+                                    <td>${item.soLuong * item.gia}</td>
+                                </tr>
+                        ))}
+                        {/* {
+                            Object.entries(menu).map(([nameProduct, value], index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>{nameProduct}</td>
+                                        <td>
+                                            <button onClick={ () => addDetail(nameProduct, 1)} className="btn btn-success">+</button>
+                                            <span className="mr-3 ml-3">
+                                                {data[nameProduct]}
+                                            </span>
+                                            <button onClick={ () => addDetail(nameProduct, - 1)} className="btn btn-danger">-</button>
+                                        </td>
+                                        <td>${value * data[nameProduct]}</td>
+                                    </tr>
+                                )
+                            })
 
-//                         }
+                        } */}
 
-//                             <tr>
-//                                 <td colSpan="2">Total</td>
-//                                 <td>${total}</td>
-//                             </tr>
-//                     </tbody> 
+                            <tr>
+                                <td colSpan="2">Total</td>
+                                <td>${total}</td>
+                            </tr>
+                    </tbody> 
                   
                    
-//                   </table>
-//               </div>
-//           </div>
-//       </div>
-//     )
+                  </table>
+              </div>
+          </div>
+      </div>
+    )
 }

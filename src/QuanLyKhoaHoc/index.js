@@ -6,7 +6,7 @@ import axios from "axios";
 // Lấy danh sách khóa học từ API và reder() ra giao diện
 export default function QuanLyKhoaHoc() {
 //   const [courses, setCourses] = useState([]);
-  const {data} = useSelector(state => state.courses);
+  const {data, isLoading, error} = useSelector(state => state.courses);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,6 +24,14 @@ export default function QuanLyKhoaHoc() {
     dispatch(getCourses());
   }, []);
 
+  if (isLoading) {
+    // TODO: tạo <Loading /> component thế vào
+    return <div>Loading...</div>
+  }
+
+  if (error) {
+    return <div>{error}</div>
+  }
   return (
     <div className="container">
       <div className="row">
