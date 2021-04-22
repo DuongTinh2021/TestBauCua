@@ -17,9 +17,10 @@ export default function NestedRouter() {
                     <Link to={`${path}/angular`}>Angular</Link>
                 </li>
             </ul>
+            
             <Switch>
                 <Route path="/topics/react" >
-                    <h1>React</h1>
+                    <h1>React1</h1>
                 </Route>
                 <Route path="/topics/vue" >
                     <h1>Vue</h1>

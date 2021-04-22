@@ -7,6 +7,7 @@ import colorReducer from "./colorReducer";
 import todosReducer from "./todosReducer";
 import coursesReducer from "./coursesReducer";
 import burgerReducer from "./burgerReducer";
+import khoaHocReducer from "./khoaHocReducer";
 const rootReducer = combineReducers({
     // đây là nơi khai báo các reducer con
     count: countReducer,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
     todos: todosReducer,
     courses: coursesReducer,
     burger: burgerReducer,
+    khoaHoc: khoaHocReducer,
 
 });
 

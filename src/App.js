@@ -37,10 +37,14 @@ import OrderBuger from "./OrderBuger";
 
 import {BrowserRouter, Route, Switch} from "react-router-dom"
 import DemoRouter from "./demoRouter";
-import NestedRouter from "./demoRouter/NestedRouter";
+// import NestedRouter from "./demoRouter/NestedRouter";
+import NestedRouter from "./testRouter/NestedRouter"
+import TestRouter from "./testRouter"
+import QuanLyKhoaHoc1 from "./QuanLyKhoaHoc1";
 // Component App
 function App() {
   return (
+    // <QuanLyKhoaHoc1 />
     <BrowserRouter>
     {/**
      * Switch: Chọn cái đầu tiên khớp với url để render ra
@@ -50,25 +54,28 @@ function App() {
          * path: so sánh path với url để quyết định component có được hiển thị ra hay khônng
          * exact: Thông thường path "/" sẽ khớp với tất cả url, để khắc phục ta thêm exact lúc này nó sẽ so dánh url khớp 100% mới hiển thi ra component
          */}
-          <Route path="/" exact component={DemoRouter} />
+         {/* <Route path="/" exact>
+            <TestRouter />
+          </Route>  */}
+          {/* <Route path="/" exact component={DemoRouter} />
 
-          <Route path="/phim/:movieId" exact component={DemoRouter} />
+          <Route path="/phim/:movieId" exact component={DemoRouter} /> */}
 
           {/**Demo Nested Router */}
-           <Route path="/topics">
+           {/* <Route path="/topics">
               <NestedRouter />
-          </Route>
+          </Route> */}
 
          {/**Cách 1: dùng props component */}
-        <Route path="/courses" component={QuanLyKhoaHoc} />
+        {/* <Route path="/courses" component={QuanLyKhoaHoc} /> */}
 
         {/**Cách 2: dùn children */}
-        <Route path="/baucua">
+        <Route path="/">
           <BauCua />
         </Route>
 
          {/**Dùng reder */}
-        <Route path="/todo-list" render = { (routerProps) =>    {return <ToDoList {...routerProps} />}}/>
+        {/* <Route path="/todo-list" render = { (routerProps) =>    {return <ToDoList {...routerProps} />}}/> */}
 
 
         {/**Để paga not found ở dưới cùng, đảm bảo đi qua tất cả các route khác nhưng ko tìm thấy route */}
