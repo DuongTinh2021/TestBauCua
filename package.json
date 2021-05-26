@@ -2,7 +2,7 @@
   "name": "fe62-reactjs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://duongtinh2021.github.io/TestBauCua/",
+  "homepage": "https://DuongTinh2021.github.io/TestBauCua/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
