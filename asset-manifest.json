@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/DuongTinh2021/TestBauCua/static/css/main.25bef56f.chunk.css",
-    "main.js": "/DuongTinh2021/TestBauCua/static/js/main.fe015b97.chunk.js",
-    "main.js.map": "/DuongTinh2021/TestBauCua/static/js/main.fe015b97.chunk.js.map",
-    "runtime-main.js": "/DuongTinh2021/TestBauCua/static/js/runtime-main.70a675fa.js",
-    "runtime-main.js.map": "/DuongTinh2021/TestBauCua/static/js/runtime-main.70a675fa.js.map",
-    "static/js/2.16a9f4cf.chunk.js": "/DuongTinh2021/TestBauCua/static/js/2.16a9f4cf.chunk.js",
-    "static/js/2.16a9f4cf.chunk.js.map": "/DuongTinh2021/TestBauCua/static/js/2.16a9f4cf.chunk.js.map",
-    "static/js/3.31726911.chunk.js": "/DuongTinh2021/TestBauCua/static/js/3.31726911.chunk.js",
-    "static/js/3.31726911.chunk.js.map": "/DuongTinh2021/TestBauCua/static/js/3.31726911.chunk.js.map",
-    "index.html": "/DuongTinh2021/TestBauCua/index.html",
-    "static/css/main.25bef56f.chunk.css.map": "/DuongTinh2021/TestBauCua/static/css/main.25bef56f.chunk.css.map",
-    "static/js/2.16a9f4cf.chunk.js.LICENSE.txt": "/DuongTinh2021/TestBauCua/static/js/2.16a9f4cf.chunk.js.LICENSE.txt"
+    "main.css": "/TestBauCua/static/css/main.25bef56f.chunk.css",
+    "main.js": "/TestBauCua/static/js/main.fe015b97.chunk.js",
+    "main.js.map": "/TestBauCua/static/js/main.fe015b97.chunk.js.map",
+    "runtime-main.js": "/TestBauCua/static/js/runtime-main.3259bfeb.js",
+    "runtime-main.js.map": "/TestBauCua/static/js/runtime-main.3259bfeb.js.map",
+    "static/js/2.16a9f4cf.chunk.js": "/TestBauCua/static/js/2.16a9f4cf.chunk.js",
+    "static/js/2.16a9f4cf.chunk.js.map": "/TestBauCua/static/js/2.16a9f4cf.chunk.js.map",
+    "static/js/3.31726911.chunk.js": "/TestBauCua/static/js/3.31726911.chunk.js",
+    "static/js/3.31726911.chunk.js.map": "/TestBauCua/static/js/3.31726911.chunk.js.map",
+    "index.html": "/TestBauCua/index.html",
+    "static/css/main.25bef56f.chunk.css.map": "/TestBauCua/static/css/main.25bef56f.chunk.css.map",
+    "static/js/2.16a9f4cf.chunk.js.LICENSE.txt": "/TestBauCua/static/js/2.16a9f4cf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.70a675fa.js",
+    "static/js/runtime-main.3259bfeb.js",
     "static/js/2.16a9f4cf.chunk.js",
     "static/css/main.25bef56f.chunk.css",
     "static/js/main.fe015b97.chunk.js"
