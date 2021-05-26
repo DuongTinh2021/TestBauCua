@@ -21,7 +21,7 @@ export default class UserManagement extends Component {
         try {
             const result = await axios({
                 method: "GET",
-                url: "https://6056f9c1055dbd0017e844c9.mockapi.io/api/users",
+                url: "https://609ce52c04bffa001792d876.mockapi.io/Users",
             });
             
             this.setState({ users: result.data}); // Sau khi có kết quả result=> gán kết quả cho user
@@ -36,7 +36,7 @@ export default class UserManagement extends Component {
        try {
            await axios({
             method: "POST",
-            url: "https://6056f9c1055dbd0017e844c9.mockapi.io/api/users",
+            url: "https://609ce52c04bffa001792d876.mockapi.io/Users",
             data: user
            })
 
@@ -51,7 +51,7 @@ export default class UserManagement extends Component {
         try {
             await axios({
              method: "PUT",
-             url: `https://6056f9c1055dbd0017e844c9.mockapi.io/api/users/${id}`,
+             url: `https://609ce52c04bffa001792d876.mockapi.io/Users/${id}`,
              data: user
             })
  
@@ -66,7 +66,7 @@ export default class UserManagement extends Component {
         try {
             await axios({
                 method: "DELETE",
-                url: `https://6056f9c1055dbd0017e844c9.mockapi.io/api/users/${userId}`
+                url: `https://609ce52c04bffa001792d876.mockapi.io/Users/${userId}`
             });
 
             this.fetchUsers();
@@ -81,7 +81,7 @@ export default class UserManagement extends Component {
         try {
            const result = await axios({
                 method: "GET",
-                url: `https://6056f9c1055dbd0017e844c9.mockapi.io/api/users/${userId}`
+                url: `https://609ce52c04bffa001792d876.mockapi.io/Users/${userId}`
             });
             this.setState({
                 selectedUser: result.data,

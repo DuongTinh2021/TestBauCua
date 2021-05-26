@@ -73,12 +73,7 @@ export default class Parent extends Component {
           {this.state.products.map((product) => {
             return (
               <div key={product.id} className="col-sm-4">
-                <SuperCard
-                  title="Product"
-                  footer={() => (
-                    <button className="btn btn-primary">Mua</button>
-                  )}
-                >
+                <SuperCard title="Product" footer={() => (<button className="btn btn-primary">Mua</button>)}>
                   <h3 className="text-primary">{product.name}</h3>
                   <p className="text-success">Price: {product.price}</p>
                 </SuperCard>

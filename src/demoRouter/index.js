@@ -26,7 +26,7 @@ export default function DemoRouter(props) {
 
     const goToCourses = () => {
         // Điều hướng tới trang courses nhưng vẫn giữ lịch sử của trang hiện tại
-         history.push("/courses");
+         history.push("/baucua");
 
     };
 

@@ -4,18 +4,18 @@ import { useDispatch, useSelector } from "react-redux"
 export default function OrderBuger() {
 
     const dispatch = useDispatch();
-    const {data, total} = useSelector(state => state.burger);
+    const {data, total, menu} = useSelector(state => state.burger);
 
 
-//    const renderBread = () => {
-//        return Object.entries(data).map(([name, value], index) => {
-//            const arrBread = [];
-//            for (let i = 0; i < value; i++) {
-//                arrBread.push(<div key ={i} className={name}></div>);
-//            }
-//            return arrBread;
-//        })
-//    }
+   const renderBread = () => {
+       return Object.entries(data).map(([name, value], index) => {
+           const arrBread = [];
+           for (let i = 0; i < value; i++) {
+               arrBread.push(<div key ={i} className={name}></div>);
+           }
+           return arrBread;
+       })
+   }
   
     const addDetail = (nameProduct, amount) => {
         const action = {
@@ -36,16 +36,8 @@ export default function OrderBuger() {
                     <h3 className="text-center">Bánh burger của bạn</h3>
 
                     <div className="breadTop"></div>
-                               {data.map((item) => {
-                                   let dem = 0;
-                                   const arrBread = []
-                                   while (dem < item.soLuong) {
-                                       dem += 1;
-                                       arrBread.push(<div key={item.gia} className={item.name}></div>);
-                                   }
-                                   return arrBread;
-                               })}
-                   {/* {renderBread()} */}
+                              
+                   {renderBread()}
                         
                     <div className="breadBottom"></div>
               </div>
@@ -61,20 +53,8 @@ export default function OrderBuger() {
                           </tr>
                       </thead>
                     <tbody>
-                        {data.map((item) => (
-                                  <tr>
-                                    <td>{item.name}</td>
-                                    <td>
-                                        <button onClick={ () => addDetail(item.name, 1)} className="btn btn-success">+</button>
-                                        <span className="mr-3 ml-3">
-                                            {item.soLuong}
-                                        </span>
-                                        <button onClick={ () => addDetail(item.name, 1)} className="btn btn-danger">-</button>
-                                    </td>
-                                    <td>${item.soLuong * item.gia}</td>
-                                </tr>
-                        ))}
-                        {/* {
+                        
+                        {
                             Object.entries(menu).map(([nameProduct, value], index) => {
                                 return (
                                     <tr key={index}>
@@ -91,7 +71,7 @@ export default function OrderBuger() {
                                 )
                             })
 
-                        } */}
+                        }
 
                             <tr>
                                 <td colSpan="2">Total</td>

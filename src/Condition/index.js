@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
 
 export default class ConditionClass extends Component {
-  isLogin = false
+  
+  state = {
+    isLogin: false,
+  }
 
   toggleLogin = () => {
-    this.isLogin = !this.isLogin
-    console.log(this.isLogin)
+    this.setState({
+      isLogin: !this.state.isLogin
+      
+    }, () => {
+      console.log(this.state.isLogin);
+    }
+    )
   }
 
   render() {
-    if(this.isLogin) {
+    if(this.state.isLogin) {
       return <div>
         <p>Đã Login</p>
         <button onClick={this.toggleLogin}>Đăng Xuất</button>
@@ -30,23 +38,23 @@ export default class ConditionClass extends Component {
   }
 }
 
-function ConditionFunction() {
-  let isLogin = false;
+// function ConditionFunction() {
+//   let isLogin = false;
 
-  if(isLogin) {
-    return <p>Đã Đăng Nhập</p>
-  }
+//   if(isLogin) {
+//     return <p>Đã Đăng Nhập</p>
+//   }
 
-  return (
-    <p>Chưa Đăng Nhập</p>
-  )
+//   return (
+//     <p>Chưa Đăng Nhập</p>
+//   )
 
-  // return (
-  //   <div>
-  //     {isLogin ? <p>Đã Login</p> : <p>Chưa Login</p>}
-  //   </div>
-  // )
-}
+//   // return (
+//   //   <div>
+//   //     {isLogin ? <p>Đã Login</p> : <p>Chưa Login</p>}
+//   //   </div>
+//   // )
+// }
 
 
 

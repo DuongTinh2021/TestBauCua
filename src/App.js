@@ -8,20 +8,21 @@ import DemoHook from "./hooks/DemoHook";
 import DemoHook1 from "./hook/DemoHook1";
 import Lifecycle from "./hooks/Lifecycle";
 
-// import Baitap1 from "./Baitap1";
-// import Baitap2 from "./Baitap2";
-// import Baitap3 from "./Baitap3";
-// import UserManagement from "./BaitapUserManagement";
-// import UserManagement1 from "./UserManagement";
-// import ConditionClass from "./Condition";
-// import DataBindingClass from "./DataBinding/DataBindingClass";
-// import DataBindingFunction from "./DataBinding/DataBindingFunction";
-// import EventClass from "./HandleEvent";
+import Baitap1 from "./Baitap1";
+import Baitap2 from "./Baitap2";
+import Baitap3 from "./Baitap3";
+import UserManagement from "./BaitapUserManagement";
+import UserManagement1 from "./UserManagement";
+import ConditionClass from "./Condition";
+import DataBindingClass from "./DataBinding/DataBindingClass";
+import DataBindingFunction from "./DataBinding/DataBindingFunction";
+import EventClass from "./HandleEvent";
 // import Lifecycle from "./Lifecycle";
-// import ListsClass from "./Lists";
+import ListsClass from "./Lists";
 // import Parent from "./Props/Parent";
-// import StateClass from "./State";
-// import Baitap3Again from "./Baitap3Again";
+import Parent from "./Ontapprops/Parent";
+import StateClass from "./State";
+import Baitap3Again from "./Baitap3Again";
 import State from "./hooks/State";
 import BauCua1 from "./Baucua1";
 import BauCua2 from "./BauCua2";
@@ -44,12 +45,15 @@ import QuanLyKhoaHoc1 from "./QuanLyKhoaHoc1";
 // Component App
 function App() {
   return (
+    // <QuanLyKhoaHoc />
+
     // <QuanLyKhoaHoc1 />
     <BrowserRouter>
     {/**
      * Switch: Chọn cái đầu tiên khớp với url để render ra
      */}
-      <Switch>
+     
+        <Switch>
         {/**
          * path: so sánh path với url để quyết định component có được hiển thị ra hay khônng
          * exact: Thông thường path "/" sẽ khớp với tất cả url, để khắc phục ta thêm exact lúc này nó sẽ so dánh url khớp 100% mới hiển thi ra component
@@ -70,11 +74,17 @@ function App() {
         {/* <Route path="/courses" component={QuanLyKhoaHoc} /> */}
 
         {/**Cách 2: dùn children */}
-        <Route path="/">
-          <BauCua />
+        {/* <Route path="/baucua">
+            <BauCua />
         </Route>
-
+        
+        <Route path="/todo-list">
+            <ToDoList />
+        </Route> */}
          {/**Dùng reder */}
+         <Route path="/">
+          <BauCua />
+         </Route>
         {/* <Route path="/todo-list" render = { (routerProps) =>    {return <ToDoList {...routerProps} />}}/> */}
 
 

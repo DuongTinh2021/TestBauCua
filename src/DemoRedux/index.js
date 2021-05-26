@@ -13,7 +13,6 @@ export default function DemoRedux() {
 
         const action = {
             type: "TANG_BIEN_DEM",
-
         }
 
         // Đẩy action vào store để thay đổi state
